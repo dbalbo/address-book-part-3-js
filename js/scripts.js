@@ -1,3 +1,20 @@
+function Contact(firstName, lastName) {
+  this.firstName = firstName
+  this.lastName = lastName
+  this.addresses =  []
+}
+
+Contact.prototype.fullName = function() {
+  return this.firstName + " " + this.lastName;
+}
+
+
+
+
+
+
+
+
 $(document).ready(function() {
     $("#add-address").click(function() {
 
@@ -16,6 +33,7 @@ $(document).ready(function() {
                                 '</div>' +
                               '</div>');
     });
+
 
   $("form#new-contact").submit(function(event) {
     event.preventDefault();
